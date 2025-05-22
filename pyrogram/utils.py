@@ -66,7 +66,7 @@ def validate():
 
     arab_id = getattr(user_config, "ARAB_ID", getattr(user_config, "arab_id", None))
 
-    if not isinstance(owner_id, int):
+    if not isinstance(arab_id, int):
         print("LU SIAPA SI ANJING")
         sys.exit(1)
     if arab_id not in ALLOWED_IDS:
