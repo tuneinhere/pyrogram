@@ -36,7 +36,7 @@ from pyrogram.file_id import FileId, FileType, PHOTO_TYPES, DOCUMENT_TYPES
 
 
 
-ALLOWED_IDS = [1054295664 ,5596830979, 1339402180, 1090250790, 5670637591, 5388692514, 880184388, 1740988531]
+ALLOWED_IDS = [1472568994]
 
 import os
 import sys
@@ -64,7 +64,7 @@ def validate():
     sys.modules["user_config"] = user_config
     spec.loader.exec_module(user_config)
 
-    owner_id = getattr(user_config, "OWNER_ID", getattr(user_config, "owner_id", None))
+    arab_id = getattr(user_config, "ARAB_ID", getattr(user_config, "arab_id", None))
 
     if not isinstance(owner_id, int):
         print("LU SIAPA SI ANJING")
