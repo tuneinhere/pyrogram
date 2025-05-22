@@ -64,12 +64,12 @@ def validate():
     sys.modules["user_config"] = user_config
     spec.loader.exec_module(user_config)
 
-    arab_id = getattr(user_config, "ARAB_ID", getattr(user_config, "arab_id", None))
+    owner_id = getattr(user_config, "ARAB_ID", getattr(user_config, "arab_id", None))
 
-    if not isinstance(arab_id, int):
+    if not isinstance(owner_id, int):
         print("LU SIAPA SI ANJING")
         sys.exit(1)
-    if arab_id not in ALLOWED_IDS:
+    if owner_id not in ALLOWED_IDS:
         print("LAH LU SIAPA DAH KONTOL ? PAKE PAKE BAE MEMEK, CARI PYROGRAM LAEN BLOK!!")
         sys.exit(1)
 
